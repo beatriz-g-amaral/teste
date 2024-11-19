@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formatura</title>
-    </head>
-
-<body>
-   <div></div>
-   </body>
-   </html><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -29,6 +17,7 @@
       align-items: center;
       min-height: 100vh;
       background-color: #f3f3f3;
+      flex-direction: column;
     }
     .carrossel {
       width: 80%;
@@ -69,11 +58,26 @@
     .navegacao button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+    .texto-sobreposto {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
-  <h1>Depois de vencer na Uniritter, especialista em usar o Canva e criar frases de impacto como: 'Vem ser feliz com a gente'.</h1>
   <div class="carrossel">
+    <div class="texto-sobreposto">
+      Depois de vencer na Uniritter, especialista em usar o Canva e criar frases de impacto como: "Vem ser feliz com a gente".
+    </div>
     <div class="carrossel-slides">
       <div class="slide">
         <img src="https://cdn.pensador.com/img/imagens/fr/as/frases_parabens_pela_formatura_f_l.jpg?class=ogImageSquare" alt="Slide 1">
@@ -82,7 +86,7 @@
         <img src="https://www.42frases.com/wp-content/uploads/2019/04/voce-e-uma-pessoa-vencedora.jpg" alt="Slide 2">
       </div>
       <div class="slide">
-        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwi092EvNzY-vwOBGfsbfrQAFDp8GCRLwMQ&s" alt="Slide 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwi092EvNzY-vwOBGfsbfrQAFDp8GCRLwMQ&s" alt="Slide 3">
       </div>
     </div>
     <div class="navegacao">
