@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formatura</title>
+    </head>
+
+<body>
+   <div></div>
+   </body>
+   </html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel Simples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f3f3f3;
+    }
+    .carrossel {
+      width: 80%;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    .carrossel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    .navegacao {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .navegacao button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .navegacao button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <h1>Depois de vencer na Uniritter, especialista em usar o Canva e criar frases de impacto como: 'Vem ser feliz com a gente'.</h1>
+  <div class="carrossel">
+    <div class="carrossel-slides">
+      <div class="slide">
+        <img src="https://cdn.pensador.com/img/imagens/fr/as/frases_parabens_pela_formatura_f_l.jpg?class=ogImageSquare" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img src="https://www.42frases.com/wp-content/uploads/2019/04/voce-e-uma-pessoa-vencedora.jpg" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwi092EvNzY-vwOBGfsbfrQAFDp8GCRLwMQ&s" alt="Slide 3">
+      </div>
+    </div>
+    <div class="navegacao">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.carrossel-slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let currentIndex = 0;
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+  </script>
+</body>
+</html>
